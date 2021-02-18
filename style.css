@@ -5,18 +5,34 @@ body{
     margin: 0;
     background-color:#2e3440;
 }
+
+/** Obliger à prendre 100 de la taille dispo **/
+.page{
+    display: flex;
+    min-height: 100vh;
+    flex-direction:column;
+}
+/** flex-grow: 1 pour obliger à prendre toute la place disponible **/
+
+.content{
+    flex-grow:1;
+}
+/** .page et .content pour fixer le footer en bas **/
+
 header{
     display:flex;
     flex-flow: row wrap;
     justify-content: center;
     background-color: #434c5e;
 }
+
 /** flow-root adapater taille box du nav à celle de menu (parents < enfant de base) **/
 nav{
     display:flow-root;
     justify-content: space-around;
     background-color: #434c5e;
 }
+
 menu{
     display: flex;
     flex-flow: row wrap;
@@ -29,39 +45,36 @@ footer{
     justify-content: center;
     background-color: #434c5e;
 }
+
 li{
     list-style: none;
     font-size: 200%;
     color: white;
 }
+
 a{
     text-decoration: none;
     color:white;
 }
+
 .titre{
     color: white;
 }
-/** Obliger à prendre 100 de la taille dispo **/
-.page{
-    display: flex;
-    min-height: 100vh;
-    flex-direction:column;
-}
-/** flex-grow: 1 pour obliger à prendre toute la place disponible **/
-.content{
-    flex-grow:1;
-}
-/** .page et .content pour fixer le footer en bas **/
+
 
 #twitter:hover{
     background-color: #55acee;
+    border-radius: 9px;
 }
 #discord:hover{
     background-color: #333;
+    border-radius: 9px;
 }
 #git:hover{
     background-color: #f77669;
+    border-radius: 9px;
 }
 #mail:hover{
     background-color: #1a262a;
+    border-radius: 9px;
 }
